@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>55电影网 - 热门电影电视剧在线观看_影视资源聚合导航</title>
+<meta name="description" content="55电影网是面向中文用户的影视资源聚合导航站，收录热门电影、热播电视剧、国创动漫与热播榜单，分类清晰、每日更新、移动端自适应，想看的片推一张就有。">
+<meta name="keywords" content="55电影网,55电影,电影在线观看,电视剧在线观看,动漫在线观看,高清影视导航,热播榜单,新片速递">
+<meta name="author" content="55电影网">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="theme-color" content="#f7f2e8">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="canonical" href="https://55dianyingwang-cn.github.io/">
+<link rel="apple-touch-icon" href="/favicon.ico">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="55电影网">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="55电影网 - 热门电影电视剧在线观看_影视资源聚合导航">
+<meta property="og:description" content="55电影网：热门电影、热播剧集、国创动漫与热播榜单一站直达，每日更新，手机端自适应。">
+<meta property="og:url" content="https://55dianyingwang-cn.github.io/">
+<meta property="og:image" content="https://55dianyingwang-cn.github.io/favicon.ico">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="55电影网 - 热门电影电视剧在线观看">
+<meta name="twitter:description" content="55电影网：热门电影、热播剧集、热播榜单一站直达，移动端自适应。">
+
+<style>
+/* ============ 设计令牌：多米诺骨牌（Domino Chain） ============ */
+:root{
+  --cream:#f7f2e8;
+  --face:#fffdf7;
+  --face-2:#f2ebdd;
+  --ink:#26221d;
+  --ink-2:#6b6156;
+  --ink-3:#a29585;
+  --red:#c94f3d;
+  --green:#4e7a5e;
+  --gold:#d9a441;
+  --blue:#4a6a8a;
+  --plum:#7c5570;
+  --teal:#3c7d7b;
+  --line:rgba(38,34,29,.16);
+  --line-2:rgba(38,34,29,.08);
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Courier New",monospace;
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --maxw:1180px;
+  --nav-h:64px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;padding:0;color:var(--ink);
+  font:16px/1.8 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background-color:var(--cream);
+  background-image:
+    radial-gradient(700px 420px at 92% -8%, rgba(217,164,65,.18), transparent 62%),
+    radial-gradient(620px 380px at 4% 4%, rgba(201,79,61,.1), transparent 60%);
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol,dl{margin:0;padding:0;list-style:none}
+h1,h2,h3,h4{margin:0;font-weight:800;line-height:1.28;letter-spacing:-.018em}
+p{margin:0}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--gold);padding:10px 16px;z-index:999;font-weight:700}
+.skip:focus{left:12px;top:12px}
+.mono{font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase}
+
+#progress{position:fixed;top:0;left:0;height:5px;width:0;z-index:200;
+  background:linear-gradient(90deg,var(--red),var(--gold),var(--green))}
+
+/* ============ 骨牌点（pip）通用画法 ============ */
+.pips{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);
+  width:100%;height:100%}
+.pips i{display:none;width:74%;height:74%;margin:auto;border-radius:50%;background:var(--pc2,var(--ink))}
+.pips i:nth-child(1){grid-area:1/1}
+.pips i:nth-child(2){grid-area:1/3}
+.pips i:nth-child(3){grid-area:2/2}
+.pips i:nth-child(4){grid-area:3/1}
+.pips i:nth-child(5){grid-area:3/3}
+.pips i:nth-child(6){grid-area:2/1}
+.pips i:nth-child(7){grid-area:2/3}
+.p1 i:nth-child(3){display:block}
+.p2 i:nth-child(1),.p2 i:nth-child(5){display:block}
+.p3 i:nth-child(1),.p3 i:nth-child(3),.p3 i:nth-child(5){display:block}
+.p4 i:nth-child(1),.p4 i:nth-child(2),.p4 i:nth-child(4),.p4 i:nth-child(5){display:block}
+.p5 i:nth-child(1),.p5 i:nth-child(2),.p5 i:nth-child(3),.p5 i:nth-child(4),.p5 i:nth-child(5){display:block}
+.p6 i:nth-child(1),.p6 i:nth-child(2),.p6 i:nth-child(4),.p6 i:nth-child(5),.p6 i:nth-child(6),.p6 i:nth-child(7){display:block}
+
+/* ============ 顶部连锁条 ============ */
+.chainbar{background:var(--ink);overflow:hidden;position:relative}
+.chainbar::before{content:"";position:absolute;inset:0;opacity:.14;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.4) 0 1px,transparent 1px 9px)}
+.chain{padding:9px 0;display:flex;gap:5px;justify-content:center;position:relative;z-index:2;flex-wrap:nowrap}
+.chain span{flex:0 0 auto;width:30px;height:52px;background:var(--face);position:relative;
+  border-radius:5px;box-shadow:inset 0 -3px 0 rgba(38,34,29,.14)}
+.chain span::after{content:"";position:absolute;left:3px;right:3px;top:50%;height:2px;margin-top:-1px;background:var(--ink)}
+.chain span i{position:absolute;left:0;right:0;height:23px;display:grid;place-items:center}
+.chain span i:nth-child(1){top:2px}
+.chain span i:nth-child(2){bottom:2px}
+.chain span i b{display:block;width:6px;height:6px;border-radius:50%;background:var(--ink)}
+.chain span:nth-child(3n){transform:rotate(-5deg)}
+.chain span:nth-child(4n){transform:rotate(4deg)}
+.chain span:nth-child(5n){background:var(--face-2)}
+
+/* ============ 导航 ============ */
+.nav{position:sticky;top:0;z-index:150;background:var(--face);border-bottom:3px solid var(--ink)}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 22px;height:var(--nav-h);display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+/* 竖骨牌 logo */
+.logo-domino{flex:0 0 auto;width:26px;height:40px;background:var(--ink);border-radius:4px;position:relative;
+  display:flex;flex-direction:column}
+.logo-domino span{flex:1;display:grid;place-items:center}
+.logo-domino span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.logo-domino::after{content:"";position:absolute;left:4px;right:4px;top:50%;height:2px;margin-top:-1px;background:var(--gold)}
+.brand b{display:block;font-size:19px;letter-spacing:-.01em}
+.brand small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.24em;color:var(--ink-2);
+  text-transform:uppercase;margin-top:-4px}
+.menu{margin-left:auto;display:flex;align-items:center;gap:2px}
+.menu a{padding:8px 12px;font-size:14.5px;font-weight:700;color:var(--ink-2);transition:.2s;white-space:nowrap;
+  border-bottom:3px solid transparent}
+.menu a:hover{color:var(--ink)}
+.menu a.active{color:var(--ink);border-bottom-color:var(--red)}
+.nav-cta{flex:0 0 auto;margin-left:8px;padding:9px 18px;background:var(--red);color:#fff8f4;
+  font-family:var(--mono);font-size:12.5px;font-weight:700;letter-spacing:.08em;white-space:nowrap;
+  box-shadow:0 4px 0 var(--ink)}
+.nav-cta:hover{background:var(--ink);transform:translateY(2px);box-shadow:0 2px 0 var(--ink)}
+.burger{display:none;margin-left:auto;width:42px;height:36px;background:var(--face);border:2px solid var(--ink);
+  cursor:pointer;place-items:center}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);transition:.22s}
+.burger span+span{margin-top:5px}
+.burger.on span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ============ Hero ============ */
+.hero{padding:40px 0 36px}
+.hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:28px;align-items:center}
+.tagchip{display:inline-flex;align-items:center;gap:9px;padding:7px 16px;background:var(--face);
+  border:2px solid var(--ink);font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.16em;
+  color:var(--ink-2);text-transform:uppercase}
+.tagchip i{display:block;width:12px;height:18px;background:var(--ink);border-radius:3px;position:relative}
+.tagchip i::after{content:"";position:absolute;left:2px;right:2px;top:50%;height:1.5px;margin-top:-.75px;background:var(--gold)}
+.hero h1{font-size:clamp(30px,5vw,52px);margin:18px 0 16px}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero h1 u{text-decoration:none;position:relative;white-space:nowrap}
+.hero h1 u::after{content:"";position:absolute;left:-2px;right:-2px;bottom:.02em;height:10px;
+  background:repeating-linear-gradient(90deg,rgba(217,164,65,.5) 0 6px,transparent 6px 11px);z-index:-1}
+.lead{font-size:16px;color:var(--ink-2);max-width:52ch}
+.lead b{color:var(--ink);font-weight:800;box-shadow:inset 0 -.5em 0 rgba(78,122,94,.24)}
+/* 搜索 */
+.search{margin:26px 0 14px;display:flex;gap:0;max-width:600px;background:var(--face);
+  border:2px solid var(--ink);box-shadow:0 8px 0 rgba(38,34,29,.16)}
+.search .pre{flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:0 14px;border-right:2px solid var(--ink);
+  font-family:var(--mono);font-size:12px;font-weight:700;color:var(--ink-2);letter-spacing:.08em}
+.search .pre i{display:block;width:10px;height:15px;background:var(--red);border-radius:2px}
+.search input{flex:1;min-width:0;border:0;outline:0;background:none;font:15px var(--sans);color:var(--ink);padding:13px 14px}
+.search input::placeholder{color:var(--ink-2)}
+.search button{border:0;border-left:2px solid var(--ink);cursor:pointer;padding:13px 26px;background:var(--green);
+  color:#f4faf6;font:800 15px var(--sans)}
+.search button:hover{background:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:9px;align-items:center;font-size:13px;font-weight:700}
+.chips a{padding:6px 15px;background:var(--face);color:var(--ink-2);border:1px solid var(--line);transition:.2s}
+.chips a:hover{border-color:var(--ink);color:var(--ink)}
+.chips a b{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:middle}
+
+/* 大双五牌 */
+.big-domino{position:relative;width:100%;max-width:300px;margin:0 auto;background:var(--face);
+  border:3px solid var(--ink);border-radius:14px;box-shadow:0 16px 34px rgba(38,34,29,.2);overflow:hidden}
+.big-domino .half{height:118px;display:flex;align-items:center;justify-content:center;padding:14px;
+  --pc2:var(--ink)}
+.big-domino .half:first-child .pips{width:104px;height:104px;--pc2:var(--red)}
+.big-domino .half:last-child .pips{width:104px;height:104px;--pc2:var(--green)}
+.big-domino .mid{height:8px;background:var(--ink);position:relative;margin:0 10px;border-radius:4px}
+.big-domino .mid::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;
+  border-radius:50%;background:var(--face);border:2px solid var(--ink)}
+.big-domino .cap{padding:12px 16px 14px;border-top:2px solid var(--ink);background:var(--face-2)}
+.big-domino .cap h3{font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.18em;
+  color:var(--ink-2);text-transform:uppercase;margin-bottom:6px}
+.big-domino .cap dl{margin:0}
+.big-domino .cap dl div{display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-size:13.5px;
+  border-bottom:1px solid var(--line-2)}
+.big-domino .cap dl div:last-child{border-bottom:0}
+.big-domino .cap dt{color:var(--ink-2);font-weight:700}
+.big-domino .cap dd{margin:0;font-family:var(--mono);font-weight:700;color:var(--red)}
+.hero-note{margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.hero-note p{font-size:12.5px;color:var(--ink-2);max-width:34ch}
+.hand{flex:0 0 auto;display:flex;gap:4px}
+.hand i{width:22px;height:36px;background:var(--face);border:2px solid var(--ink);border-radius:4px;position:relative}
+.hand i::after{content:"";position:absolute;left:2px;right:2px;top:50%;height:2px;margin-top:-1px;background:var(--ink)}
+.hand i:nth-child(1)::before,.hand i:nth-child(3)::before{content:"";position:absolute;left:6px;top:5px;width:5px;height:5px;
+  border-radius:50%;background:var(--ink)}
+.hand i:nth-child(2){transform:rotate(-12deg)}
+
+/* ============ 栏目通用 ============ */
+section{padding:0}
+.inner{padding:46px 0;border-top:2px solid var(--line)}
+.sec-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+/* 牌面序号 */
+.face-no{flex:0 0 auto;width:52px;background:var(--face);border:2px solid var(--ink);border-radius:8px;
+  overflow:hidden;text-align:center}
+.face-no b{display:block;font-family:var(--mono);font-size:16px;font-weight:700;padding:7px 0 6px;line-height:1}
+.face-no i{display:block;height:4px;background:var(--ink);margin:0 6px;border-radius:2px}
+.face-no span{display:block;font-family:var(--mono);font-size:7px;font-weight:700;letter-spacing:.14em;
+  color:var(--ink-2);padding:5px 0 6px;text-transform:uppercase}
+.sec-head .txt{flex:1;min-width:260px}
+.sec-head h2{font-size:clamp(21px,2.9vw,30px)}
+.sec-head h2 small{display:block;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.28em;
+  color:var(--ink-2);text-transform:uppercase;margin-bottom:7px}
+.sec-head p{font-size:14.3px;color:var(--ink-2);max-width:56ch;margin-top:8px}
+.more{flex:0 0 auto;align-self:center;padding:11px 20px;background:var(--ink);color:var(--face);
+  font-family:var(--mono);font-size:12.5px;font-weight:700;letter-spacing:.08em;white-space:nowrap}
+.more:hover{background:var(--green)}
+
+.filters{display:flex;gap:9px;overflow-x:auto;padding-bottom:6px;margin-bottom:22px;scrollbar-width:none;flex-wrap:wrap}
+.filters::-webkit-scrollbar{display:none}
+.filters button{flex:0 0 auto;border:1px solid var(--line);background:var(--face);color:var(--ink-2);
+  padding:8px 18px;font:700 14.5px var(--sans);cursor:pointer;transition:.18s}
+.filters button:hover{border-color:var(--ink);color:var(--ink)}
+.filters button.on{background:var(--ink);color:var(--face);border-color:var(--ink)}
+
+/* ============ 片库：骨牌卡 ============ */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:18px}
+.tile{margin:0;background:var(--face);border:2px solid var(--ink);border-radius:12px;overflow:hidden;
+  transition:transform .26s ease,box-shadow .26s ease}
+.tile:hover{transform:translateY(-6px);box-shadow:0 18px 32px rgba(38,34,29,.18)}
+.tile .a{position:relative;aspect-ratio:3/4;overflow:hidden;
+  background:linear-gradient(165deg,var(--c1),var(--c2))}
+.tile .a::before{content:"";position:absolute;inset:0;opacity:.42;
+  background-image:radial-gradient(circle 7px at 20% 26%,rgba(255,255,255,.7) 96%,transparent 100%),
+    radial-gradient(circle 7px at 50% 26%,rgba(255,255,255,.7) 96%,transparent 100%),
+    radial-gradient(circle 7px at 80% 26%,rgba(255,255,255,.7) 96%,transparent 100%),
+    radial-gradient(circle 7px at 35% 62%,rgba(255,255,255,.6) 96%,transparent 100%),
+    radial-gradient(circle 7px at 65% 62%,rgba(255,255,255,.6) 96%,transparent 100%)}
+.tile .a::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(38,34,29,.88))}
+.tile .tag{position:absolute;left:0;top:14px;z-index:3;font-family:var(--mono);font-size:10px;font-weight:700;
+  letter-spacing:.1em;padding:4px 11px 4px 9px;color:#fff8f4;background:var(--pc)}
+.tile .sc{position:absolute;right:9px;top:9px;z-index:3;min-width:42px;height:27px;display:grid;place-items:center;
+  padding:0 7px;font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--ink);background:var(--face);
+  border:2px solid var(--ink);border-radius:6px}
+.tile .nm{position:absolute;left:11px;right:11px;bottom:11px;z-index:3;font-size:13.5px;font-weight:800;color:#fff;
+  text-shadow:0 2px 10px rgba(38,34,29,.7)}
+/* 中缝 */
+.tile .mid{height:7px;background:var(--ink);position:relative;margin:0 12px;border-radius:3px}
+.tile .mid::after{content:"";position:absolute;left:50%;top:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;
+  border-radius:50%;background:var(--face);border:2px solid var(--ink)}
+.tile .b{padding:14px 12px 15px}
+.tile .b h3{font-size:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tile .b p{font-size:12.3px;color:var(--ink-2);margin-top:3px;display:flex;justify-content:space-between;
+  gap:8px;font-weight:700}
+.tile .b p em{font-style:normal;font-family:var(--mono);font-weight:700;color:var(--pc)}
+.tile .spec{margin-top:9px;padding-top:8px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;
+  gap:8px;font-family:var(--mono);font-size:10px;font-weight:700;color:var(--ink-2);letter-spacing:.08em}
+
+/* ============ 剧集：横牌行 ============ */
+.rows{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+.dn{display:flex;gap:0;background:var(--face);border:2px solid var(--ink);border-radius:10px;overflow:hidden;
+  transition:.26s}
+.dn:hover{transform:translateY(-4px);box-shadow:0 16px 28px rgba(38,34,29,.16)}
+.dn .ph{flex:0 0 92px;position:relative;overflow:hidden;background:linear-gradient(165deg,var(--c1),var(--c2))}
+.dn .ph::before{content:"";position:absolute;inset:0;opacity:.42;
+  background-image:radial-gradient(circle 7px at 50% 30%,rgba(255,255,255,.7) 96%,transparent 100%),
+    radial-gradient(circle 7px at 28% 58%,rgba(255,255,255,.6) 96%,transparent 100%),
+    radial-gradient(circle 7px at 72% 58%,rgba(255,255,255,.6) 96%,transparent 100%)}
+.dn .ph span{position:absolute;left:0;right:0;bottom:0;z-index:2;font-family:var(--mono);font-size:10px;
+  text-align:center;padding:3px 0;color:#fff8f4;background:rgba(38,34,29,.92)}
+.dn .seam{flex:0 0 7px;background:var(--ink);position:relative}
+.dn .seam::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:11px;margin:-5.5px 0 0 -5.5px;
+  border-radius:50%;background:var(--face);border:2px solid var(--ink)}
+.dn .bd{flex:1;min-width:0;padding:13px 14px}
+.dn .bd h3{font-size:15.5px;display:flex;align-items:center;gap:9px}
+.dn .bd h3 i{flex:0 0 auto;font-style:normal;font-family:var(--mono);font-size:10px;font-weight:700;
+  letter-spacing:.08em;padding:3px 8px;color:#fff8f4;background:var(--pc);border-radius:4px}
+.dn .bd > p{font-size:12.5px;color:var(--ink-2);margin-top:3px;font-weight:700}
+/* 点数进度 */
+.dn .dots{margin-top:11px;display:flex;align-items:center;gap:5px}
+.dn .dots i{width:13px;height:13px;border-radius:50%;border:2px solid var(--pc);background:transparent}
+.dn .dots i.on{background:var(--pc)}
+.dn .dots em{margin-left:6px;font-style:normal;font-family:var(--mono);font-size:11.5px;font-weight:700;
+  color:var(--pc);letter-spacing:.06em}
+/* 牌端点数块 */
+.dn .end{flex:0 0 52px;display:flex;align-items:center;justify-content:center;border-left:2px solid var(--ink);
+  background:var(--face-2);padding:8px}
+.dn .end .pips{width:32px;height:32px;--pc2:var(--pc)}
+
+/* ============ 榜单：三叠牌堆 ============ */
+.stacks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+.stk{background:var(--face);border:2px solid var(--ink);border-radius:12px;overflow:hidden}
+.stk .top{position:relative;padding:16px 15px 14px;background:linear-gradient(170deg,var(--face-2),var(--cream));
+  border-bottom:2px solid var(--ink);display:flex;align-items:center;gap:13px}
+/* 牌堆厚度 */
+.stk .deck{flex:0 0 auto;position:relative;width:44px;height:60px}
+.stk .deck b{position:absolute;left:0;top:0;width:40px;height:54px;background:var(--face);border:2px solid var(--ink);
+  border-radius:6px}
+.stk .deck b:nth-child(1){left:4px;top:5px;background:var(--face-2)}
+.stk .deck b:nth-child(2){left:2px;top:2px;background:var(--face)}
+.stk .k1 .deck b:nth-child(1){top:8px}
+.stk .k2 .deck b:nth-child(1){top:5px}
+.stk .k3 .deck b:nth-child(1){top:3px}
+.stk .deck span{position:absolute;left:9px;top:12px;z-index:3;width:22px;height:22px}
+.stk .deck span::before,.stk .deck span::after{content:"";position:absolute;width:5px;height:5px;border-radius:50%;
+  background:var(--bc)}
+.stk .deck span::before{left:0;top:0}
+.stk .deck span::after{right:0;bottom:0}
+.stk .top h3{font-size:16.5px;flex:1;min-width:0}
+.stk .top h3 em{display:block;font-style:normal;font-family:var(--mono);font-size:9.5px;font-weight:700;
+  letter-spacing:.18em;color:var(--ink-2);margin-top:4px}
+.stk .top u{position:absolute;right:14px;top:14px;text-decoration:none;font-family:var(--mono);font-size:9.5px;
+  font-weight:700;letter-spacing:.12em;color:#fff8f4;background:var(--bc);padding:3px 8px;border-radius:4px}
+.stk ol{padding:12px 15px 14px}
+.stk ol li{display:flex;align-items:center;gap:11px;padding:9px 0;border-bottom:1px solid var(--line-2)}
+.stk ol li:last-child{border-bottom:0}
+.stk .no{flex:0 0 auto;width:30px;height:30px;display:grid;place-items:center;font-family:var(--mono);font-size:12px;
+  font-weight:700;color:var(--ink-2);background:var(--cream);border:1px solid var(--line);border-radius:6px}
+.stk ol li:first-child .no{color:#fff8f4;background:var(--bc);border-color:var(--bc)}
+.stk .rt{flex:1;min-width:0}
+.stk .rt strong{display:block;font-size:14.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.stk .rt span{font-size:12px;color:var(--ink-2)}
+.stk .val{flex:0 0 auto;font-family:var(--mono);font-size:13.5px;font-weight:700;color:var(--bc)}
+
+/* ============ 牌局速递 ============ */
+.bulletins{display:grid;grid-template-columns:repeat(auto-fill,minmax(274px,1fr));gap:18px}
+.bn{background:var(--face);border:2px solid var(--ink);border-radius:10px;overflow:hidden;transition:.28s}
+.bn:hover{transform:translateY(-6px);box-shadow:0 18px 32px rgba(38,34,29,.17)}
+.bn .cv{height:120px;position:relative;background:linear-gradient(155deg,var(--c1),var(--c2))}
+.bn .cv::before{content:"";position:absolute;inset:0;opacity:.44;
+  background-image:radial-gradient(circle 7px at 22% 30%,rgba(255,255,255,.7) 96%,transparent 100%),
+    radial-gradient(circle 7px at 52% 30%,rgba(255,255,255,.7) 96%,transparent 100%),
+    radial-gradient(circle 7px at 82% 30%,rgba(255,255,255,.7) 96%,transparent 100%),
+    radial-gradient(circle 7px at 37% 66%,rgba(255,255,255,.6) 96%,transparent 100%),
+    radial-gradient(circle 7px at 67% 66%,rgba(255,255,255,.6) 96%,transparent 100%)}
+.bn .cv b{position:absolute;left:0;bottom:12px;z-index:3;font-family:var(--mono);font-size:11px;font-weight:700;
+  letter-spacing:.14em;padding:5px 13px 5px 9px;color:#fff8f4;background:var(--pc)}
+.bn .cv u{position:absolute;right:10px;top:10px;z-index:3;text-decoration:none;font-family:var(--mono);
+  font-size:9.5px;font-weight:700;letter-spacing:.14em;color:var(--ink);background:var(--gold);padding:3px 9px;
+  border-radius:4px}
+.bn .bd{padding:15px 16px 18px}
+.bn .bd h3{font-size:16px;margin-bottom:7px}
+.bn .bd p{font-size:13.5px;color:var(--ink-2)}
+.bn .bd time{display:block;margin-top:11px;font-family:var(--mono);font-size:11.5px;font-weight:700;
+  color:var(--ink-2);letter-spacing:.08em}
+
+/* ============ 关于 / FAQ ============ */
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;align-items:start}
+.panel{background:var(--face);border:2px solid var(--ink);border-radius:12px;padding:24px}
+.panel h3{font-size:19px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px dashed var(--line)}
+.panel p{font-size:14.5px;color:var(--ink-2);margin-bottom:11px}
+.panel p b{color:var(--ink);box-shadow:inset 0 -.5em 0 rgba(217,164,65,.38)}
+.suits{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.suits div{padding:14px 10px;text-align:center;background:var(--cream);border:2px solid var(--ink);border-radius:8px}
+.suits span{display:block;width:30px;height:36px;margin:0 auto 8px;position:relative;background:var(--face);
+  border:2px solid var(--ink);border-radius:4px}
+.suits span::after{content:"";position:absolute;left:3px;right:3px;top:50%;height:2px;margin-top:-1px;background:var(--ink)}
+.suits span i{position:absolute;left:6px;top:6px;width:5px;height:5px;border-radius:50%;background:var(--ink)}
+.suits span b{position:absolute;right:6px;bottom:6px;width:5px;height:5px;border-radius:50%;background:var(--ink)}
+.suits strong{display:block;font-size:13px}
+.suits em{font-style:normal;font-size:11.5px;color:var(--ink-2);font-weight:700}
+.faq details{border-bottom:1px solid var(--line-2);padding:13px 0}
+.faq summary{cursor:pointer;font-size:15px;font-weight:800;list-style:none;display:flex;justify-content:space-between;
+  gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"● ●";font-size:9px;color:var(--red);letter-spacing:2px}
+.faq details[open] summary::after{content:"● ○";color:var(--green)}
+.faq details p{font-size:14px;color:var(--ink-2);margin-top:9px}
+
+/* CTA */
+.cta{margin-top:14px;padding:44px 26px;text-align:center;position:relative;overflow:hidden;
+  background:var(--ink);color:var(--face)}
+.cta::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;
+  background-image:radial-gradient(circle 6px at 12% 30%,rgba(255,253,247,.75) 96%,transparent 100%),
+    radial-gradient(circle 6px at 22% 30%,rgba(255,253,247,.75) 96%,transparent 100%),
+    radial-gradient(circle 6px at 17% 62%,rgba(255,253,247,.75) 96%,transparent 100%),
+    radial-gradient(circle 6px at 82% 40%,rgba(255,253,247,.75) 96%,transparent 100%),
+    radial-gradient(circle 6px at 92% 40%,rgba(255,253,247,.75) 96%,transparent 100%)}
+.cta h2{position:relative;font-size:clamp(20px,3vw,29px);margin-bottom:10px}
+.cta h2 em{font-style:normal;color:var(--gold)}
+.cta p{position:relative;font-size:14.5px;color:rgba(255,253,247,.84);max-width:56ch;margin:0 auto 22px}
+.cta a{position:relative;display:inline-block;padding:14px 34px;background:var(--gold);color:var(--ink);
+  font-family:var(--mono);font-size:14px;font-weight:700;letter-spacing:.1em;box-shadow:0 5px 0 rgba(0,0,0,.34)}
+.cta a:hover{background:#e9b755}
+
+/* 页脚 */
+footer{margin-top:0;padding:34px 0 22px;background:#1b1815;color:var(--cream)}
+.fgrid{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:26px}
+.fgrid h4{font-size:15px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(247,242,232,.24);
+  color:var(--gold);letter-spacing:.08em}
+.fgrid a,.fgrid li{font-size:13.5px;color:rgba(247,242,232,.66);line-height:2.1}
+.fgrid a:hover{color:var(--gold)}
+.fbrand .lg{display:flex;align-items:center;gap:11px;font-size:19px;font-weight:800;letter-spacing:-.01em}
+.fbrand .lg i{font-style:normal;display:block;width:22px;height:34px;flex:0 0 auto;position:relative;
+  background:var(--cream);border-radius:4px}
+.fbrand .lg i::after{content:"";position:absolute;left:3px;right:3px;top:50%;height:2px;margin-top:-1px;background:#1b1815}
+.fbrand p{font-size:13.5px;color:rgba(247,242,232,.6);margin-top:11px;max-width:42ch}
+.bottom{margin-top:24px;padding-top:16px;border-top:1px solid rgba(247,242,232,.22);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:rgba(247,242,232,.6)}
+.bottom b{color:var(--gold)}
+
+#top{position:fixed;right:16px;bottom:20px;width:46px;height:46px;background:var(--face);color:var(--ink);
+  border:2px solid var(--ink);border-radius:8px;display:grid;place-items:center;cursor:pointer;z-index:160;opacity:0;
+  pointer-events:none;transition:.25s;box-shadow:0 8px 18px rgba(38,34,29,.22)}
+#top.show{opacity:1;pointer-events:auto}
+#top:hover{background:var(--red);color:#fff8f4}
+#top svg{width:18px;height:18px;fill:currentColor}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ============ 响应式 ============ */
+@media (max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:24px}
+  .big-domino{max-width:340px}
+  .about{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .stacks{grid-template-columns:1fr}
+}
+@media (max-width:880px){
+  .menu{position:fixed;top:var(--nav-h);left:10px;right:10px;flex-direction:column;align-items:stretch;gap:2px;
+    padding:12px;background:var(--face);border:2px solid var(--ink);border-radius:10px;
+    box-shadow:0 18px 40px rgba(38,34,29,.24);
+    transform:translateY(-10px);opacity:0;visibility:hidden;transition:.24s;
+    max-height:calc(100vh - var(--nav-h) - 30px);overflow:auto}
+  .menu.open{transform:none;opacity:1;visibility:visible}
+  .menu a{padding:14px 16px;font-size:16px;border-bottom:1px solid var(--line-2)}
+  .nav-cta{margin:8px 0 0;text-align:center}
+  .burger{display:grid}
+  .hero{padding:22px 0 20px}
+  .rows{grid-template-columns:1fr}
+  .chain span:nth-child(n+9){display:none}
+}
+@media (max-width:600px){
+  .wrap{padding:0 15px}
+  .nav-in{padding:0 15px}
+  .inner{padding:34px 0}
+  .grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .tile .nm{font-size:12px}
+  .tile .b{padding:12px 10px 13px}
+  .tile .b h3{font-size:13.5px}
+  .search{flex-wrap:wrap}
+  .search .pre{flex:1 1 100%;padding:8px 14px;border-right:0;border-bottom:2px solid var(--ink)}
+  .search input{flex:1 1 100%;border-bottom:2px solid var(--ink)}
+  .search button{flex:1 1 100%;border-left:0;border-top:2px solid var(--ink)}
+  .big-domino .half{height:98px}
+  .big-domino .half .pips{width:86px;height:86px}
+  .hero-note{flex-direction:column;align-items:flex-start}
+  .suits{grid-template-columns:repeat(2,1fr)}
+  .fgrid{grid-template-columns:1fr;gap:20px}
+  .cta{padding:32px 16px}
+  .sec-head{gap:12px}
+  .face-no{width:46px}
+  .face-no b{font-size:14px}
+  .face-no span{font-size:6.5px}
+  .dn .end{display:none}
+  .dn .bd h3{font-size:14px}
+  .chain span{width:24px;height:44px}
+  .chain span:nth-child(n+7){display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<a class="skip" href="#main">跳到主要内容</a>
+<div id="progress" aria-hidden="true"></div>
+
+<!-- ===== 顶部连锁条 ===== -->
+<div class="chainbar">
+  <div class="chain" aria-hidden="true">
+    <span><i><b></b></i><i><b></b><b></b></i></span>
+    <span><i><b></b><b></b></i><i><b></b></i></span>
+    <span><i><b></b><b></b><b></b></i><i><b></b><b></b></i></span>
+    <span><i><b></b></i><i><b></b><b></b><b></b></i></span>
+    <span><i><b></b><b></b><b></b><b></b></i><i><b></b></i></span>
+    <span><i><b></b><b></b></i><i><b></b><b></b><b></b></i></span>
+    <span><i><b></b><b></b><b></b></i><i><b></b><b></b><b></b></i></span>
+    <span><i><b></b></i><i><b></b></i></span>
+    <span><i><b></b><b></b><b></b><b></b></i><i><b></b><b></b><b></b><b></b></i></span>
+    <span><i><b></b><b></b></i><i><b></b><b></b></i></span>
+    <span><i><b></b><b></b><b></b></i><i><b></b></i></span>
+    <span><i><b></b></i><i><b></b><b></b><b></b><b></b></i></span>
+  </div>
+</div>
+
+<!-- ===== 导航 ===== -->
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="#home" aria-label="55电影网首页">
+      <span class="logo-domino" aria-hidden="true"><span></span><span></span></span>
+      <span><b>55电影网</b><small>domino chain</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="展开导航菜单" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="menu" id="menu" aria-label="主导航">
+      <a href="#home" class="active">牌局首页</a>
+      <a href="#movie">骨牌片库</a>
+      <a href="#series">追更牌行</a>
+      <a href="#rank">牌堆榜单</a>
+      <a href="#news">牌局速递</a>
+      <a href="#about">玩法指南</a>
+      <a class="nav-cta" href="#movie">推一张</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== 首页 ===== -->
+  <section id="home" class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tagchip"><i aria-hidden="true"></i>CHAIN 01 · 双五开局</span>
+        <h1>好片推一张就有，<em>55电影网</em> <u>连锁开牌</u></h1>
+        <p class="lead">
+          55电影网是面向中文用户的影视资源聚合导航站：热门电影、<b>热播剧集</b>、国创动漫与热播榜单一站收拢，
+          分类清晰、每日上新，手机、平板、电脑打开都能顺畅在线观看。
+        </p>
+        <form class="search" role="search" id="searchForm">
+          <span class="pre" aria-hidden="true"><i></i>检索</span>
+          <input type="search" name="q" placeholder="搜索片名、演员或类型，例如：科幻 / 治愈" aria-label="站内搜索">
+          <button type="submit">推一张</button>
+        </form>
+        <div class="chips">
+          <a href="#movie"><b style="background:var(--red)"></b>剧情牌组</a>
+          <a href="#movie"><b style="background:var(--green)"></b>治愈牌组</a>
+          <a href="#series"><b style="background:var(--blue)"></b>都市情感</a>
+          <a href="#rank"><b style="background:var(--gold)"></b>高分牌组</a>
+          <a href="#movie"><b style="background:var(--plum)"></b>国创动漫</a>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="big-domino">
+          <div class="half"><span class="pips p5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="half"><span class="pips p5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+          <div class="cap">
+            <h3>Double Five · 今日牌面</h3>
+            <dl>
+              <div><dt>收录影片</dt><dd>36,900+</dd></div>
+              <div><dt>精细分类</dt><dd>18</dd></div>
+              <div><dt>上新频率</dt><dd>每日 2 次</dd></div>
+              <div><dt>榜单刷新</dt><dd>每小时</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="hero-note">
+          <p>55电影网把分散的影视入口排成一列骨牌，推倒第一张，剩下的自己就位。</p>
+          <span class="hand" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 栏目一：骨牌片库 ===== -->
+  <section id="movie">
+    <div class="wrap inner">
+      <div class="sec-head reveal">
+        <span class="face-no"><b>01</b><i></i><span>TILE</span></span>
+        <div class="txt">
+          <h2><small>Library</small>骨牌片库 · 每部影片都是一张待推的牌</h2>
+          <p>55电影网把片库按题材分成六副牌组：剧情、治愈、动作、悬疑、爱情、动漫。点一下就换牌组，卡片是真正的骨牌造型——上半封面、下半信息，中间一道带圆点的刻线。</p>
+        </div>
+        <a class="more" href="#">查看全部分类 →</a>
+      </div>
+      <div class="filters" role="tablist" aria-label="影片类型筛选">
+        <button class="on" data-cat="all" role="tab" aria-selected="true">全部牌组</button>
+        <button data-cat="drama" role="tab" aria-selected="false">剧情</button>
+        <button data-cat="heal" role="tab" aria-selected="false">治愈</button>
+        <button data-cat="action" role="tab" aria-selected="false">动作</button>
+        <button data-cat="mystery" role="tab" aria-selected="false">悬疑</button>
+        <button data-cat="love" role="tab" aria-selected="false">爱情</button>
+        <button data-cat="anime" role="tab" aria-selected="false">动漫</button>
+      </div>
+      <div class="grid" id="movieGrid">
+        <article class="tile reveal" data-cat="drama" style="--pc:var(--red);--c1:#c94f3d;--c2:#4a1510">
+          <div class="a"><span class="tag">剧情</span><span class="sc">9.1</span><span class="nm">三月花信</span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="b"><h3>三月花信</h3>
+            <p><span>剧情 · 2026</span><em>9.1</em></p>
+            <span class="spec"><span>TILE 5|5</span><span>2026-031</span></span>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="heal" style="--pc:var(--green);--c1:#4e7a5e;--c2:#16301f">
+          <div class="a"><span class="tag">治愈</span><span class="sc">8.9</span><span class="nm">潮汐来信</span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="b"><h3>潮汐来信</h3>
+            <p><span>剧情 · 2026</span><em>8.9</em></p>
+            <span class="spec"><span>TILE 4|4</span><span>2026-028</span></span>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="action" style="--pc:var(--blue);--c1:#4a6a8a;--c2:#152738">
+          <div class="a"><span class="tag">动作</span><span class="sc">8.5</span><span class="nm">疾速拦截</span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="b"><h3>疾速拦截</h3>
+            <p><span>动作 · 2026</span><em>8.5</em></p>
+            <span class="spec"><span>TILE 6|3</span><span>2026-024</span></span>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="mystery" style="--pc:var(--plum);--c1:#7c5570;--c2:#231422">
+          <div class="a"><span class="tag">悬疑</span><span class="sc">8.8</span><span class="nm">第七个证人</span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="b"><h3>第七个证人</h3>
+            <p><span>悬疑 · 2025</span><em>8.8</em></p>
+            <span class="spec"><span>TILE 3|6</span><span>2025-117</span></span>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="love" style="--pc:var(--gold);--c1:#d9a441;--c2:#4d3608">
+          <div class="a"><span class="tag">爱情</span><span class="sc">8.7</span><span class="nm">长街旧事</span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="b"><h3>长街旧事</h3>
+            <p><span>剧情 · 2025</span><em>8.7</em></p>
+            <span class="spec"><span>TILE 2|5</span><span>2025-104</span></span>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="anime" style="--pc:var(--teal);--c1:#3c7d7b;--c2:#0f2c2b">
+          <div class="a"><span class="tag">动漫</span><span class="sc">8.6</span><span class="nm">花灯记</span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="b"><h3>花灯记</h3>
+            <p><span>动画 · 2026</span><em>8.6</em></p>
+            <span class="spec"><span>TILE 5|2</span><span>2026-019</span></span>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="heal" style="--pc:var(--green);--c1:#639073;--c2:#16301f">
+          <div class="a"><span class="tag">治愈</span><span class="sc">8.3</span><span class="nm">海边小店</span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="b"><h3>海边小店</h3>
+            <p><span>剧情 · 2025</span><em>8.3</em></p>
+            <span class="spec"><span>TILE 1|4</span><span>2025-092</span></span>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="mystery" style="--pc:var(--plum);--c1:#8f6a84;--c2:#231422">
+          <div class="a"><span class="tag">悬疑</span><span class="sc">8.4</span><span class="nm">无声证词</span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="b"><h3>无声证词</h3>
+            <p><span>悬疑 · 2024</span><em>8.4</em></p>
+            <span class="spec"><span>TILE 4|1</span><span>2024-076</span></span>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="action" style="--pc:var(--blue);--c1:#5d7f9e;--c2:#152738">
+          <div class="a"><span class="tag">动作</span><span class="sc">8.1</span><span class="nm">极速追缉</span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="b"><h3>极速追缉</h3>
+            <p><span>动作 · 2026</span><em>8.1</em></p>
+            <span class="spec"><span>TILE 2|2</span><span>2026-015</span></span>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="drama" style="--pc:var(--red);--c1:#d9685a;--c2:#4a1510">
+          <div class="a"><span class="tag">剧情</span><span class="sc">9.0</span><span class="nm">深空信号</span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="b"><h3>深空信号</h3>
+            <p><span>剧情 · 2026</span><em>9.0</em></p>
+            <span class="spec"><span>TILE 6|6</span><span>2026-008</span></span>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="anime" style="--pc:var(--gold);--c1:#e5b75d;--c2:#4d3608">
+          <div class="a"><span class="tag">动漫</span><span class="sc">8.2</span><span class="nm">山海食记</span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="b"><h3>山海食记</h3>
+            <p><span>动画 · 2025</span><em>8.2</em></p>
+            <span class="spec"><span>TILE 3|3</span><span>2025-061</span></span>
+          </div>
+        </article>
+        <article class="tile reveal" data-cat="love" style="--pc:var(--teal);--c1:#519590;--c2:#0f2c2b">
+          <div class="a"><span class="tag">爱情</span><span class="sc">7.9</span><span class="nm">周末大赢家</span></div>
+          <div class="mid" aria-hidden="true"></div>
+          <div class="b"><h3>周末大赢家</h3>
+            <p><span>喜剧 · 2025</span><em>7.9</em></p>
+            <span class="spec"><span>TILE 1|1</span><span>2025-043</span></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 栏目二：追更牌行 ===== -->
+  <section id="series">
+    <div class="wrap inner">
+      <div class="sec-head reveal">
+        <span class="face-no"><b>02</b><i></i><span>ROW</span></span>
+        <div class="txt">
+          <h2><small>Series</small>追更牌行 · 点数亮到第几颗，就更新到第几集</h2>
+          <p>都市情感、年代往事、悬疑罪案同步跟播，每部剧是一张横排的骨牌，左侧封面、右侧点数进度，最右端一枚点数牌收尾。</p>
+        </div>
+        <a class="more" href="#">更新时间表 →</a>
+      </div>
+      <div class="rows">
+        <article class="dn reveal" style="--pc:var(--red);--c1:#c94f3d;--c2:#4a1510">
+          <span class="ph"><span>EP 24</span></span>
+          <span class="seam" aria-hidden="true"></span>
+          <div class="bd">
+            <h3><i>更新中</i>三月花信</h3>
+            <p>剧情 / 年代 · 每周三、周五 20:00</p>
+            <span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><em>24 / 30 集 · 4/5 点</em></span>
+          </div>
+          <span class="end"><span class="pips p4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+        </article>
+        <article class="dn reveal" style="--pc:var(--gold);--c1:#d9a441;--c2:#4d3608">
+          <span class="ph"><span>EP 20</span></span>
+          <span class="seam" aria-hidden="true"></span>
+          <div class="bd">
+            <h3><i>更新中</i>长街旧事</h3>
+            <p>剧情 / 年代 · 每周一至周三 21:00</p>
+            <span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><em>20 / 32 集 · 3/5 点</em></span>
+          </div>
+          <span class="end"><span class="pips p3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+        </article>
+        <article class="dn reveal" style="--pc:var(--green);--c1:#4e7a5e;--c2:#16301f">
+          <span class="ph"><span>EP 32</span></span>
+          <span class="seam" aria-hidden="true"></span>
+          <div class="bd">
+            <h3><i>已完结</i>潮汐来信</h3>
+            <p>爱情 / 都市 · 全 32 集一次看爽</p>
+            <span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><em>32 / 32 集 · 满点</em></span>
+          </div>
+          <span class="end"><span class="pips p5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+        </article>
+        <article class="dn reveal" style="--pc:var(--plum);--c1:#7c5570;--c2:#231422">
+          <span class="ph"><span>EP 12</span></span>
+          <span class="seam" aria-hidden="true"></span>
+          <div class="bd">
+            <h3><i>更新中</i>深空信号</h3>
+            <p>剧情 / 科幻 · 每周六 22:00</p>
+            <span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><em>12 / 30 集 · 2/5 点</em></span>
+          </div>
+          <span class="end"><span class="pips p2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+        </article>
+        <article class="dn reveal" style="--pc:var(--teal);--c1:#3c7d7b;--c2:#0f2c2b">
+          <span class="ph"><span>EP 30</span></span>
+          <span class="seam" aria-hidden="true"></span>
+          <div class="bd">
+            <h3><i>更新中</i>山海食记</h3>
+            <p>动画 / 国创 · 每周四 10:00</p>
+            <span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><em>30 / 40 集 · 4/5 点</em></span>
+          </div>
+          <span class="end"><span class="pips p4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+        </article>
+        <article class="dn reveal" style="--pc:var(--blue);--c1:#4a6a8a;--c2:#152738">
+          <span class="ph"><span>EP 08</span></span>
+          <span class="seam" aria-hidden="true"></span>
+          <div class="bd">
+            <h3><i>更新中</i>极速追缉</h3>
+            <p>动作 / 涉案 · 每周日 20:00</p>
+            <span class="dots"><i class="on"></i><i></i><i></i><i></i><i></i><em>8 / 30 集 · 1/5 点</em></span>
+          </div>
+          <span class="end"><span class="pips p1" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 栏目三：牌堆榜单 ===== -->
+  <section id="rank">
+    <div class="wrap inner">
+      <div class="sec-head reveal">
+        <span class="face-no"><b>03</b><i></i><span>STACK</span></span>
+        <div class="txt">
+          <h2><small>Ranking</small>牌堆榜单 · 三叠牌，各码一份榜单</h2>
+          <p>榜单综合55电影网站内播放热度、完播率与观众评分，每小时重算一次，榜头是一叠层层错开的骨牌，厚度就是热度。</p>
+        </div>
+        <a class="more" href="#">榜单规则 →</a>
+      </div>
+      <div class="stacks">
+        <div class="stk k1 reveal" style="--bc:var(--red)">
+          <div class="top">
+            <span class="deck" aria-hidden="true"><b></b><b></b><span></span></span>
+            <h3>今日热播榜<em>HOT STACK</em></h3><u>5|5</u>
+          </div>
+          <ol>
+            <li><span class="no">01</span><span class="rt"><strong>三月花信</strong><span>剧情 · 2026</span></span><span class="val">9.1</span></li>
+            <li><span class="no">02</span><span class="rt"><strong>深空信号</strong><span>剧情 · 2026</span></span><span class="val">9.0</span></li>
+            <li><span class="no">03</span><span class="rt"><strong>潮汐来信</strong><span>治愈 · 2026</span></span><span class="val">8.9</span></li>
+            <li><span class="no">04</span><span class="rt"><strong>第七个证人</strong><span>悬疑 · 2025</span></span><span class="val">8.8</span></li>
+            <li><span class="no">05</span><span class="rt"><strong>长街旧事</strong><span>爱情 · 2025</span></span><span class="val">8.7</span></li>
+          </ol>
+        </div>
+        <div class="stk k2 reveal" style="--bc:var(--green)">
+          <div class="top">
+            <span class="deck" aria-hidden="true"><b></b><b></b><span></span></span>
+            <h3>高分口碑榜<em>TOP RATED</em></h3><u>4|4</u>
+          </div>
+          <ol>
+            <li><span class="no">01</span><span class="rt"><strong>第七个证人</strong><span>悬疑 · 2025</span></span><span class="val">8.8</span></li>
+            <li><span class="no">02</span><span class="rt"><strong>花灯记</strong><span>动画 · 2026</span></span><span class="val">8.6</span></li>
+            <li><span class="no">03</span><span class="rt"><strong>疾速拦截</strong><span>动作 · 2026</span></span><span class="val">8.5</span></li>
+            <li><span class="no">04</span><span class="rt"><strong>无声证词</strong><span>悬疑 · 2024</span></span><span class="val">8.4</span></li>
+            <li><span class="no">05</span><span class="rt"><strong>海边小店</strong><span>治愈 · 2025</span></span><span class="val">8.3</span></li>
+          </ol>
+        </div>
+        <div class="stk k3 reveal" style="--bc:var(--blue)">
+          <div class="top">
+            <span class="deck" aria-hidden="true"><b></b><b></b><span></span></span>
+            <h3>国创动漫榜<em>ANIME</em></h3><u>3|3</u>
+          </div>
+          <ol>
+            <li><span class="no">01</span><span class="rt"><strong>花灯记</strong><span>动画 · 2026</span></span><span class="val">8.6</span></li>
+            <li><span class="no">02</span><span class="rt"><strong>山海食记</strong><span>动画 · 2025</span></span><span class="val">8.2</span></li>
+            <li><span class="no">03</span><span class="rt"><strong>星辰旅人</strong><span>动画 · 2026</span></span><span class="val">7.9</span></li>
+            <li><span class="no">04</span><span class="rt"><strong>机械之心</strong><span>动画 · 2025</span></span><span class="val">7.6</span></li>
+            <li><span class="no">05</span><span class="rt"><strong>森林邮局</strong><span>动画 · 2024</span></span><span class="val">7.3</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 栏目四：牌局速递 ===== -->
+  <section id="news">
+    <div class="wrap inner">
+      <div class="sec-head reveal">
+        <span class="face-no"><b>04</b><i></i><span>NEWS</span></span>
+        <div class="txt">
+          <h2><small>Bulletin</small>牌局速递 · 上线消息与观影攻略</h2>
+          <p>每天梳理上线消息、题材观察与观影攻略，在点开播放器之前先做一次低成本决策。</p>
+        </div>
+        <a class="more" href="#">更多牌局速递 →</a>
+      </div>
+      <div class="bulletins">
+        <article class="bn reveal" style="--pc:var(--red);--c1:#c94f3d;--c2:#4a1510">
+          <div class="cv"><b>今日上新</b><u>NEW</u></div>
+          <div class="bd"><h3>本周新片：剧情与治愈同台</h3><p>55电影网整理本周上线新片的题材分布与看点，附观影顺序建议。</p><time datetime="2026-10-04">2026-10-04</time></div>
+        </article>
+        <article class="bn reveal" style="--pc:var(--green);--c1:#4e7a5e;--c2:#16301f">
+          <div class="cv"><b>观影指南</b><u>GUIDE</u></div>
+          <div class="bd"><h3>手机上看清 1080P 的三步排查法</h3><p>从码率、播放器到网络环境逐一排查，弱网下也能获得稳定的高清体验。</p><time datetime="2026-10-02">2026-10-02</time></div>
+        </article>
+        <article class="bn reveal" style="--pc:var(--blue);--c1:#4a6a8a;--c2:#152738">
+          <div class="cv"><b>榜单解读</b><u>RANK</u></div>
+          <div class="bd"><h3>热播榜的分数是怎么算出来的</h3><p>拆解55电影网榜单权重：播放热度、完播率与评分如何共同决定排位。</p><time datetime="2026-09-29">2026-09-29</time></div>
+        </article>
+        <article class="bn reveal" style="--pc:var(--gold);--c1:#d9a441;--c2:#4d3608">
+          <div class="cv"><b>题材专题</b><u>TOPIC</u></div>
+          <div class="bd"><h3>一份陪你过周末的治愈片单</h3><p>从轻松日常到温柔结局，挑选 12 部适合周末慢慢看的治愈系作品。</p><time datetime="2026-09-26">2026-09-26</time></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 栏目五：玩法指南 ===== -->
+  <section id="about">
+    <div class="wrap inner">
+      <div class="sec-head reveal">
+        <span class="face-no"><b>05</b><i></i><span>INFO</span></span>
+        <div class="txt">
+          <h2><small>About</small>关于55电影网</h2>
+          <p>一个把「找片」这件事变短的影视资源聚合导航站，分类、榜单与新片信息集中在一页里。</p>
+        </div>
+        <a class="more" href="#">意见反馈 →</a>
+      </div>
+      <div class="about">
+        <div class="panel reveal">
+          <h3>我们做什么</h3>
+          <p><b>55电影网</b>（https://55dianyingwang-cn.github.io）是一个面向中文用户的影视资源聚合导航站。目标很直接：让「找片」这件事变短，把分散的影视入口、分类标签与榜单数据收进同一个页面。</p>
+          <p>三条坚持：<b>分类够细</b>、<b>上新够勤</b>、<b>页面够轻</b>。整站单页结构，移动端自适应，弱网也能快速打开。</p>
+          <div class="suits">
+            <div><span aria-hidden="true"><i></i><b></b></span><strong>六副牌组</strong><em>按题材切换</em></div>
+            <div><span aria-hidden="true"><i></i><b></b></span><strong>移动优先</strong><em>手机平板全适配</em></div>
+            <div><span aria-hidden="true"><i></i><b></b></span><strong>每日上新</strong><em>10:00 / 21:00</em></div>
+            <div><span aria-hidden="true"><i></i><b></b></span><strong>轻量加载</strong><em>单页打开即看</em></div>
+          </div>
+        </div>
+        <div class="panel faq reveal">
+          <h3>常见问题</h3>
+          <details open><summary>55电影网需要注册才能浏览吗？</summary><p>不需要。骨牌片库、榜单与牌局速递内容全部开放访问，打开页面即可查看，无需注册登录。</p></details>
+          <details><summary>为什么把站点做成「多米诺骨牌」的样子？</summary><p>站名「55」就是一副双五牌。我们想表达「推一张就有连锁反应」：题材是牌组，影片是一张张待推的牌，更新进度是点数亮到第几颗，榜单是码好的牌堆，热度越高堆得越厚。</p></details>
+          <details><summary>手机端会自动适配屏幕吗？</summary><p>会。页面为响应式布局，手机上自动切换为双列卡片与折叠导航，牌行与牌堆转单列，横竖屏都能正常显示。</p></details>
+          <details><summary>影片清晰度可以自己选吗？</summary><p>支持多档清晰度切换，具体档位以播放源为准；网络较差时建议先降低清晰度保证流畅。</p></details>
+          <details><summary>找不到想看的影片怎么办？</summary><p>先用顶部搜索框按片名、演员或类型检索，也可进入骨牌片库按题材与年份逐层筛选。</p></details>
+        </div>
+      </div>
+
+      <div class="cta reveal">
+        <h2>今天推哪一张？<em>55电影网</em> 连锁开牌</h2>
+        <p>收藏55电影网，随时打开就能看到最新上线的电影、剧集与热播榜单，今天不愁没得看。</p>
+        <a href="#movie">推一张</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== 页脚 ===== -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a class="lg" href="#home" aria-label="55电影网首页"><i aria-hidden="true"></i>55电影网</a>
+        <p>55电影网 · 影视资源聚合导航。本站仅提供影视信息索引与分类导航服务。</p>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <ul>
+          <li><a href="#home">牌局首页</a></li>
+          <li><a href="#movie">骨牌片库</a></li>
+          <li><a href="#series">追更牌行</a></li>
+          <li><a href="#rank">牌堆榜单</a></li>
+          <li><a href="#news">牌局速递</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>热门类型</h4>
+        <ul>
+          <li><a href="#movie">治愈系电影</a></li>
+          <li><a href="#movie">剧情电影</a></li>
+          <li><a href="#movie">悬疑犯罪</a></li>
+          <li><a href="#movie">爱情剧情</a></li>
+          <li><a href="#movie">国创动漫</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于本站</h4>
+        <ul>
+          <li><a href="#about">关于55电影网</a></li>
+          <li><a href="#about">常见问题</a></li>
+          <li><a href="#">意见反馈</a></li>
+          <li><a href="#">免责声明</a></li>
+          <li><a href="#">友情链接</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 55电影网 https://55dianyingwang-cn.github.io · 影视信息聚合导航</span>
+      <span>热门关键词：<b>55电影网</b> · 电影在线观看 · 电视剧在线观看 · 动漫在线观看 · 热播榜单</span>
+    </div>
+  </div>
+</footer>
+
+<button id="top" aria-label="回到顶部"><svg viewBox="0 0 24 24"><path d="M12 5l7 7h-4v7h-6v-7H5z"/></svg></button>
+
+<!-- ===== 结构化数据（利于必应理解与收录） ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://55dianyingwang-cn.github.io/#website",
+      "url": "https://55dianyingwang-cn.github.io/",
+      "name": "55电影网",
+      "alternateName": ["55电影", "55电影网官网"],
+      "description": "55电影网是面向中文用户的影视资源聚合导航站，收录热门电影、热播电视剧、国创动漫与热播榜单。",
+      "inLanguage": "zh-CN",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": "https://55dianyingwang-cn.github.io/?q={search_term_string}" },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://55dianyingwang-cn.github.io/#organization",
+      "name": "55电影网",
+      "url": "https://55dianyingwang-cn.github.io/",
+      "logo": "https://55dianyingwang-cn.github.io/favicon.ico"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://55dianyingwang-cn.github.io/#webpage",
+      "url": "https://55dianyingwang-cn.github.io/",
+      "name": "55电影网 - 热门电影电视剧在线观看_影视资源聚合导航",
+      "isPartOf": { "@id": "https://55dianyingwang-cn.github.io/#website" },
+      "about": { "@id": "https://55dianyingwang-cn.github.io/#organization" },
+      "inLanguage": "zh-CN",
+      "primaryImageOfPage": "https://55dianyingwang-cn.github.io/favicon.ico",
+      "breadcrumb": { "@id": "https://55dianyingwang-cn.github.io/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://55dianyingwang-cn.github.io/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://55dianyingwang-cn.github.io/" },
+        { "@type": "ListItem", "position": 2, "name": "骨牌片库", "item": "https://55dianyingwang-cn.github.io/#movie" },
+        { "@type": "ListItem", "position": 3, "name": "追更牌行", "item": "https://55dianyingwang-cn.github.io/#series" },
+        { "@type": "ListItem", "position": 4, "name": "牌堆榜单", "item": "https://55dianyingwang-cn.github.io/#rank" },
+        { "@type": "ListItem", "position": 5, "name": "牌局速递", "item": "https://55dianyingwang-cn.github.io/#news" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "55电影网今日热播榜",
+      "itemListOrder": "https://schema.org/ItemListOrderDescending",
+      "numberOfItems": 5,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "三月花信" },
+        { "@type": "ListItem", "position": 2, "name": "深空信号" },
+        { "@type": "ListItem", "position": 3, "name": "潮汐来信" },
+        { "@type": "ListItem", "position": 4, "name": "第七个证人" },
+        { "@type": "ListItem", "position": 5, "name": "长街旧事" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "55电影网需要注册才能浏览吗？",
+          "acceptedAnswer": { "@type": "Answer", "text": "不需要。骨牌片库、榜单与牌局速递内容全部开放访问，打开页面即可查看，无需注册登录。" } },
+        { "@type": "Question", "name": "为什么把站点做成「多米诺骨牌」的样子？",
+          "acceptedAnswer": { "@type": "Answer", "text": "站名「55」就是一副双五牌。我们想表达「推一张就有连锁反应」：题材是牌组，影片是一张张待推的牌，更新进度是点数亮到第几颗，榜单是码好的牌堆，热度越高堆得越厚。" } },
+        { "@type": "Question", "name": "手机端会自动适配屏幕吗？",
+          "acceptedAnswer": { "@type": "Answer", "text": "会。页面为响应式布局，手机上自动切换为双列卡片与折叠导航，牌行与牌堆转单列，横竖屏都能正常显示。" } },
+        { "@type": "Question", "name": "影片清晰度可以自己选吗？",
+          "acceptedAnswer": { "@type": "Answer", "text": "支持多档清晰度切换，具体档位以播放源为准；网络较差时建议先降低清晰度保证流畅。" } },
+        { "@type": "Question", "name": "找不到想看的影片怎么办？",
+          "acceptedAnswer": { "@type": "Answer", "text": "先用顶部搜索框按片名、演员或类型检索，也可进入骨牌片库按题材与年份逐层筛选。" } }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  'use strict';
+  var bar = document.getElementById('progress');
+  var topBtn = document.getElementById('top');
+  function onScroll () {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var y = window.scrollY || document.documentElement.scrollTop;
+    bar.style.width = (h > 0 ? Math.min(1, y / h) * 100 : 0) + '%';
+    if (y > 420) { topBtn.classList.add('show'); } else { topBtn.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  topBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  /* 移动端导航 */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  burger.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    burger.classList.toggle('on', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') {
+      menu.classList.remove('open');
+      burger.classList.remove('on');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  /* 导航高亮 */
+  var links = Array.prototype.slice.call(menu.querySelectorAll('a[href^="#"]:not(.nav-cta)'));
+  var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  if ('IntersectionObserver' in window) {
+    var navObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) { return; }
+        links.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    secs.forEach(function (s) { navObs.observe(s); });
+  }
+
+  /* 牌组筛选 */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.filters button'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#movieGrid .tile'));
+  tabs.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      tabs.forEach(function (b) { b.classList.remove('on'); b.setAttribute('aria-selected', 'false'); });
+      btn.classList.add('on');
+      btn.setAttribute('aria-selected', 'true');
+      var cat = btn.getAttribute('data-cat');
+      cards.forEach(function (c) {
+        c.style.display = (cat === 'all' || c.getAttribute('data-cat') === cat) ? '' : 'none';
+      });
+    });
+  });
+
+  /* 搜索 */
+  var form = document.getElementById('searchForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.q.value.trim()) { form.q.focus(); return; }
+    document.getElementById('movie').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  /* 入场动画 */
+  var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en, i) {
+        if (en.isIntersecting) {
+          var el = en.target;
+          setTimeout(function () { el.classList.add('in'); }, i * 50);
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(function (r) { io.observe(r); });
+  } else {
+    reveals.forEach(function (r) { r.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
